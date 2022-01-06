@@ -1,6 +1,11 @@
 import discord #import all the necessary modules
 import os
+import nltk
 from neuralintents import GenericAssistant
+
+
+nltk.download('omw-1.4')
+
 
 chatbot = GenericAssistant('intents2.json')
 chatbot.train_model()
@@ -21,4 +26,11 @@ async def on_message(message):
         response = chatbot.request(message.content[4:])
         await message.channel.send(response)
 
+print('running bot with token')
+print(os.environ['token'])
+
 client.run(os.environ['token'])
+
+
+print('finished')
+
