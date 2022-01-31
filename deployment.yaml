@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: chat-bot-pod
-          image: scholtz2/vote-coin-chatbot:1.0.2-stable
+          image: scholtz2/vote-coin-chatbot:1.0.3-stable
           imagePullPolicy: Always
           resources:
             limits:

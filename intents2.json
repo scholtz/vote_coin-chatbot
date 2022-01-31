@@ -16,7 +16,7 @@
         },
         {"tag": "help",
          "patterns": ["Help me to use bot", "What commands are available?", "what options do you respond to?"],
-         "responses": ["Type 'Bot ?' to get available commands"],
+         "responses": ["Type 'Bot help' to get available commands"],
          "context_set": ""
         },
         {"tag": "purchase",

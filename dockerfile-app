@@ -1,7 +1,12 @@
 # set base image (host OS)
-FROM scholtz2/vote-coin-chatbot-base:1.0.0-stable
+FROM scholtz2/vote-coin-chatbot-base:1.0.3-stable
 
 # set the working directory in the container
+COPY aibot.py .
+COPY intents2.json .
+
+RUN python3 aibot.py
+
 COPY . .
 
 # command to run on container start
