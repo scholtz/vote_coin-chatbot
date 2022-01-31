@@ -14,9 +14,14 @@
          "responses": ["You can call me vote.", "I'm your guide through your vote coin experiece. ", "I'm the vote coin Ai bot."],
          "context_set": ""
         },
+        {"tag": "help",
+         "patterns": ["Help me to use bot", "What commands are available?", "what options do you respond to?"],
+         "responses": ["Type 'Bot ?' to get available commands"],
+         "context_set": ""
+        },
         {"tag": "purchase",
-         "patterns": ["Id like to buy vote coin", "whats the curret price of vote coin", "where can i buy and sell vote coin"],
-         "responses": ["You can buy vote coin from  tinyman.org and algodex website "],
+         "patterns": ["Id like to buy vote coin", "whats the curret price of vote coin", "where can i buy and sell vote coin", "purchase $vote"],
+         "responses": ["You can buy vote coin from tinyman: https://app.tinyman.org/#/swap?asset_in=0&asset_out=452399768"],
          "context_set": ""
         },
         {"tag": "overview",
