@@ -24,6 +24,11 @@
          "responses": ["You can buy vote coin from tinyman: https://app.tinyman.org/#/swap?asset_in=0&asset_out=452399768"],
          "context_set": ""
         },
+        {"tag": "algodex",
+         "patterns": ["", "Can i buy vote coin at algodex?", "can i sell at algodex", "purchase $vote"],
+         "responses": ["You can buy or sell vote coin at algodex: https://app.algodex.com/trade/452399768 Vote coin is one of the top listed coins."],
+         "context_set": ""
+        },
         {"tag": "overview",
          "patterns": ["Tell me about votecoin", "what is vote coin", "Tell me the basic concept of vote coin"],
          "responses": ["The goal of this standard is to make the knowledge based pure democracy reality. This standard defines specification on how organization can propose voting, how organization can create trusted list of voters, how person can cast votes and how person can delegate other persons to vote on his behalf.The goal of these conventions is to make any organization who seeks public voting the standard on how to vote.Even if this standard is meant to be for algorand for the effeciency of the transactions and low transaction costs, it is not limitted to this blockchain. It can be used with any blockchain who support self transactions with specific payment, note field with at least 1000 bytes long message, and ability to search the network for specific transactions indexed by the amount, start of the note field, and/or the account."],
