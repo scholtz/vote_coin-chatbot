@@ -21,12 +21,22 @@
         },
         {"tag": "purchase",
          "patterns": ["Id like to buy vote coin", "whats the curret price of vote coin", "where can i buy and sell vote coin", "purchase $vote"],
-         "responses": ["You can buy vote coin from tinyman: https://app.tinyman.org/#/swap?asset_in=0&asset_out=452399768"],
+         "responses": ["You can buy vote coin from AlgoDex, PactFi or TinyMan: https://app.algodex.com/trade/452399768, https://app.pact.fi/swap?pair=ALGO0/VOTE+COIN452399768(1), https://app.tinyman.org/#/swap?asset_in=0&asset_out=452399768 . Algodex is ordebook DEX, Pact.Fi has fee 0,01%, and TinyMan fees are 0,3%"],
          "context_set": ""
         },
         {"tag": "algodex",
          "patterns": ["", "Can i buy vote coin at algodex?", "can i sell at algodex", "purchase $vote"],
          "responses": ["You can buy or sell vote coin at algodex: https://app.algodex.com/trade/452399768 Vote coin is one of the top listed coins."],
+         "context_set": ""
+        },
+        {"tag": "choicecoin",
+         "patterns": ["Is Vote Coin better than ChoiceCoin?", "Is Vote Coin better than QVote?"],
+         "responses": ["Vote Coin differs from choice coin and QVote with the basic logic on how results are calculated. Vote coin standard uses blockchain to store the data - questions, answers, delegations, management and result messages. The results are calculated offchain using the indexer and complicated way which allows circular delegation, quadratic voting and encryption. Because all data is onchain, everything is auditable and verifiable. The ability to cast vote in single transaction and ability to delegate voting power to someone else makes vote coin the most affordable voting onchain solution."],
+         "context_set": ""
+        },
+        {"tag": "source",
+         "patterns": ["", "Is vote coin open source?", "Where is the vote coin source code?"],
+         "responses": ["Vote coin specs is open source, vote coin application is also open source, and vote coin API is open source as well. Specifications: https://raw.githubusercontent.com/scholtz/AMS/main/AMS-0001/AMS-0001.md, Demo and mainnet application: https://github.com/scholtz/vote-coin-demo, API: https://github.com/scholtz/VoteCoinApi, Vote coin web: https://github.com/scholtz/vote-coin-docs"],
          "context_set": ""
         },
         {"tag": "overview",
