@@ -21,12 +21,12 @@
         },
         {"tag": "purchase",
          "patterns": ["Id like to buy vote coin", "whats the curret price of vote coin", "where can i buy and sell vote coin", "purchase $vote"],
-         "responses": ["You can buy vote coin from AlgoDex, PactFi or TinyMan: https://app.algodex.com/trade/452399768, https://app.pact.fi/swap?pair=ALGO0/VOTE+COIN452399768(1), https://app.tinyman.org/#/swap?asset_in=0&asset_out=452399768 . Algodex is ordebook DEX, Pact.Fi has fee 0,01%, and TinyMan fees are 0,3%"],
+         "responses": ["The best way to buy the $Vote is using the dex aggregators. You can use comparision of dex aggregator quotes at the Biatec wallet (https://wallet.biatec.io) or you can use the vestige router, folks router or alamex. You can also use the direct swap at the DEXes which is however not receommended because you will not get the best quote."],
          "context_set": ""
         },
         {"tag": "algodex",
          "patterns": ["", "Can i buy vote coin at algodex?", "can i sell at algodex", "purchase $vote"],
-         "responses": ["You can buy or sell vote coin at algodex: https://app.algodex.com/trade/452399768 Vote coin is one of the top listed coins."],
+         "responses": ["AlgoDex trading is not longer operational. However if they make it work again, it should be available here: https://app.algodex.com/trade/452399768"],
          "context_set": ""
         },
         {"tag": "choicecoin",
@@ -43,6 +43,90 @@
          "patterns": ["Tell me about votecoin", "what is vote coin", "Tell me the basic concept of vote coin"],
          "responses": ["The goal of this standard is to make the knowledge based pure democracy reality. This standard defines specification on how organization can propose voting, how organization can create trusted list of voters, how person can cast votes and how person can delegate other persons to vote on his behalf.The goal of these conventions is to make any organization who seeks public voting the standard on how to vote.Even if this standard is meant to be for algorand for the effeciency of the transactions and low transaction costs, it is not limitted to this blockchain. It can be used with any blockchain who support self transactions with specific payment, note field with at least 1000 bytes long message, and ability to search the network for specific transactions indexed by the amount, start of the note field, and/or the account."],
          "context_set": ""
+        },
+        {
+            "tag": "project_overview",
+            "patterns": ["Tell me about Vote Coin", "What is Vote Coin?", "Can you provide an overview of the Vote Coin project?"],
+            "responses": ["Vote Coin is a project on the Algorand blockchain that offers a standard for managing decentralized autonomous organizations (DAOs) through auditable and efficient on-chain voting systems. You can learn more at https://www.vote-coin.com."],
+            "context_set": ""
+        },
+        {
+            "tag": "staking_program",
+            "patterns": ["How does the staking program work?", "Tell me about Vote Coin's staking incentives", "What are the staking rewards for holding Vote Coin?"],
+            "responses": ["Vote Coin offers a community staking incentive program where holders of at least 1,000 $vote receive 10% annual interest. Additionally, liquidity providers in official AMM pools can earn up to 50% annual interest. Details are available at https://www.vote-coin.com/vote-coin-tokenomics/staking-program."],
+            "context_set": ""
+        },
+        {
+            "tag": "buy_vote_coin",
+            "patterns": ["Where can I buy Vote Coin?", "How do I purchase $vote?", "What platforms support Vote Coin trading?"],
+            "responses": ["The best way to buy $vote is by using DEX aggregators like Deflex, Alamex, Vestige, or Folks Router, which can be accessed through platforms such as https://dex.biatec.io/. More information is available at https://www.vote-coin.com/vote-coin-tokenomics/trade-vote-coin."],
+            "context_set": ""
+        },
+        {
+            "tag": "vote_coin_features",
+            "patterns": ["What are the main features of Vote Coin?", "Can you list the key features of the Vote Coin project?", "What functionalities does Vote Coin offer?"],
+            "responses": ["Vote Coin provides auditable voting results, cost efficiency, and promotes knowledge-based wisdom in decision-making processes. Learn more at https://www.vote-coin.com."],
+            "context_set": ""
+        },
+        {
+            "tag": "dao_management",
+            "patterns": ["How does Vote Coin assist in DAO management?", "Can Vote Coin help manage a DAO?", "What solutions does Vote Coin offer for DAOs?"],
+            "responses": ["Vote Coin offers a standard to manage DAOs by providing on-chain, auditable, and efficient voting systems, ensuring transparent and trustworthy decision-making processes. Details are available at https://www.vote-coin.com."],
+            "context_set": ""
+        },
+        {
+            "tag": "liquidity_pools",
+            "patterns": ["Which liquidity pools support Vote Coin?", "Where can I provide liquidity for $vote?", "What are the available liquidity pools for Vote Coin?"],
+            "responses": ["Vote Coin is supported in various liquidity pools, including pairs with ALGO, USDC, BTC, gALGO, goUSD, and Stasis EUR. You can find more information at https://www.vote-coin.com/vote-coin-tokenomics/trade-vote-coin."],
+            "context_set": ""
+        },
+        {
+            "tag": "testnet_token",
+            "patterns": ["Is there a testnet token for Vote Coin?", "Can I test Vote Coin on a testnet?", "Does Vote Coin offer a testnet version?"],
+            "responses": ["Yes, Vote Coin provides a testnet token for testing purposes in the demo application. More details can be found at https://www.vote-coin.com/vote-coin-tokenomics/trade-vote-coin."],
+            "context_set": ""
+        },
+        {
+            "tag": "staking_disclaimer",
+            "patterns": ["Are there any disclaimers for the staking program?", "What should I know about the staking program?", "Is the staking program permanent?"],
+            "responses": ["The staking program is a marketing campaign and may conclude at any time. It is not legally binding. Announcements about changes are primarily made through the Discord channel: https://discord.gg/tzRcBHDSXt. More information is available at https://www.vote-coin.com/vote-coin-tokenomics/staking-program."],
+            "context_set": ""
+        },
+        {
+            "tag": "amm_staking",
+            "patterns": ["How does the AMM staking incentive program work?", "What are the rewards for AMM liquidity providers?", "Can I earn rewards by providing liquidity in AMM pools?"],
+            "responses": ["Vote Coin offers an AMM staking incentive program where liquidity providers in official AMM pools can earn up to 50% annual interest, depending on the pool's fee structure. Details are available at https://www.vote-coin.com/vote-coin-tokenomics/staking-program."],
+            "context_set": ""
+        },
+        {
+            "tag": "project_vision",
+            "patterns": ["What is the vision of Vote Coin?", "What does Vote Coin aim to achieve?", "Can you explain the mission of Vote Coin?"],
+            "responses": ["Vote Coin aims to provide a solution for easy on-chain decision-making, supporting DAOs with secure, auditable, and efficient voting systems. Learn more at https://www.vote-coin.com."],
+            "context_set": ""
+        },
+        {
+            "tag": "community_engagement",
+            "patterns": ["How can I engage with the Vote Coin community?", "Are there community channels for Vote Coin?", "Where can I discuss Vote Coin with others?"],
+            "responses": ["You can join the Vote Coin community on Discord: https://discord.gg/tzRcBHDSXt. More information is available at https://www.vote-coin.com/join-the-community."],
+            "context_set": ""
+        },
+        {
+            "tag": "open_source_solutions",
+            "patterns": ["Does Vote Coin offer open-source solutions?", "Where can I find Vote Coin's open-source projects?", "Are there any open-source tools from Vote Coin?"],
+            "responses": ["Yes, Vote Coin provides open-source solutions and tutorials to assist in implementing their standards. You can explore these resources at https://www.vote-coin.com/solutions-and-tutorials/open-source-solutions."],
+            "context_set": ""
+        },
+        {
+            "tag": "research_studies",
+            "patterns": ["Are there any research studies on Vote Coin?", "Where can I find research related to Vote Coin?", "Has Vote Coin conducted any research?"],
+            "responses": ["Vote Coin has conducted research studies to enhance their voting systems and standards. You can find these studies at https://www.vote-coin.com/solutions-and-tutorials/research-studies."],
+            "context_set": ""
+        },
+        {
+            "tag": "promotion_materials",
+            "patterns": ["Where can I find promotional materials for Vote Coin?", "Does Vote Coin provide logos or branding assets?", "Can I access Vote Coin's promotional content?"],
+            "responses": ["Vote Coin offers promotional materials, including logos and branding assets, which can be found at https://www.vote-coin.com/promotion-materials/logos."],
+            "context_set": ""
         }
    ]
 }

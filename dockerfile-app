@@ -1,5 +1,5 @@
 # set base image (host OS)
-FROM scholtz2/vote-coin-chatbot-base:1.0.3-stable
+FROM scholtz2/vote-coin-chatbot-base:1.0.5-stable
 
 # set the working directory in the container
 COPY aibot.py .

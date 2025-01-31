@@ -2,14 +2,14 @@ import discord #import all the necessary modules
 import os
 import sys
 from slugify import slugify
-from neuralintents import GenericAssistant
+from neuralintents import BasicAssistant
 import contextlib
 import requests
 
 print('bot is starting')
 
-chatbot = GenericAssistant('intents2.json')
-chatbot.load_model()
+chatbot = BasicAssistant('intents2.json')
+chatbot.fit_model(epochs=50)
 
 
 def price_usdc_vote():
@@ -37,7 +37,15 @@ def price_vote_algo():
     return price
 
 print('bot done training')
-client = discord.Client()
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+client = discord.Client(intents=intents)
+
+@client.event
+async def on_ready():
+    print(f'We have logged in as {client.user}')
 
 @client.event 
 async def on_message(message):
@@ -77,7 +85,7 @@ async def on_message(message):
         elif text == 'bot-help':
             await message.channel.send("Current commands: 'Bot VOTEUSDC|VOTEALGO|USDCVOTE|ALGOVOTE'")
         else:
-            response = chatbot.request(message.content[4:])
+            response = chatbot.process_input(message.content[4:])
             await message.channel.send(response)
 
 print('running bot with token')
